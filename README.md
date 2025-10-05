@@ -1,5 +1,3 @@
-# assignment2-boyermoore-aset
-
 # Assignment 2 — Boyer–Moore Majority Vote Algorithm
 
 ## Overview
@@ -19,17 +17,38 @@ At the end of the pass, the candidate is the majority element (appearing more th
 **Best / Worst / Average case:** All Θ(n)
 
 ## Implementation Structure
-src/main/java/edu/astanait/algorithms/boyermoore/
-├── BoyerMooreMajority.java
-├── PerformanceTracker.java
-└── BenchmarkRunner.java
+The project consists of the following main components:
+- `BoyerMooreMajority.java` — core algorithm implementation
+- `PerformanceTracker.java` — measures time, comparisons, and memory accesses
+- `BenchmarkRunner.java` — runs performance tests on random data
+- `BoyerMooreMajorityTest.java` — unit tests using JUnit 5
+- `docs/analysis-report.pdf` — detailed algorithm analysis
+- `docs/comparison-summary.pdf` — comparison with other algorithms  
 
-Copy code
-src/test/java/edu/astanait/algorithms/boyermoore/
-└── BoyerMooreTest.java
 
-markdown
-Copy code
+
+src/
+
+main/java/edu/astanait/algorithms/boyermoore/
+ 
+      BoyerMooreMajority.java
+
+      PerformanceTracker.java
+
+      BenchmarkRunner.java
+
+
+test/java/edu/astanait/algorithms/boyermoore/
+
+      BoyerMooreMajorityTest.java
+
+
+docs/
+
+      analysis-report.pdf
+
+      comparison-summary.pdf
+
 
 ## Empirical Validation
 Benchmarks were executed on multiple input sizes (10³–10⁶).  
@@ -38,13 +57,7 @@ Collected metrics include:
 - Element accesses
 - Comparisons performed
 
-Plots and CSV data are located in:
-docs/performance-plots/
-
-markdown
-Copy code
-
-## Results Summary
+### Results Summary
 | Input Size | Time (ms) | Accesses | Comparisons |
 |-------------|-----------|-----------|--------------|
 | 1,000       | 0.2       | 1,000     | 600          |
@@ -62,5 +75,20 @@ The measured results confirm linear scaling consistent with Θ(n).
 
 Commits follow the course guidelines (`feat()`, `test()`, `docs()`, `fix()`, etc.).
 
+## Reports
+[Individual Algorithm Analysis Report — Boyer–Moore Majority Vote Algorithm](docs/analysis-report.pdf)  
+[Comparison Summary Report](docs/comparison-summary.pdf)
+
+## Authors
+- **Aset Syrgabaev** — Algorithm design, benchmarking, and documentation
+- **Assem Tutkabay** — Testing, validation, and report preparation
+
+## Course Information
+*Design and Analysis of Algorithms (RIAA 2310)*  
+Instructor: **Aidana Aidynkyzy**  
+Fall Semester 2025 — Astana IT University
+
 ## Acknowledgment
-This project is developed by **Aset Syrgabaev** for the *Design and Analysis of Algorithms* course at **Astana IT University**, 2025–2026.
+This project was developed by **Aset Syrgabaev** and **Assem Tutkabay**  
+as part of the *Design and Analysis of Algorithms (RIAA 2310)* course  
+at **Astana IT University**, Academic Year 2025–2026.
